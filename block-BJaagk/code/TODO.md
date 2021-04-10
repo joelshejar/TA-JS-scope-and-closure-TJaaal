@@ -57,8 +57,8 @@ function add(a, b) {
 }
 
 let five = add(2, 3); // Answer VALID
-five = add; // Answer INVALID
-five = five(10, 11); // Answer INVALID
+five = add; // Answer VALID
+five = five(10, 11); // Answer VALID
 five = function () {
   return 'Hello';
 }; // Answer VALID
@@ -80,7 +80,7 @@ function hello() {
 }
 
 hello.user = 'Sam'; // valid or invalid
-```invalid
+```valid
 
 9. What is higher order function explain with an example.
 Higher-order functions are functions that take other functions as arguments or return functions as their results.

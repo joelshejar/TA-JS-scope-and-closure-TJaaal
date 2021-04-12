@@ -63,8 +63,8 @@ sayHi();
 4.
 
 ```js
-console.log(arr); // output [1, 2, 3, 4, 5, 6]
-console.log(username); // output 'Sam'
+console.log(arr); // output undefined
+console.log(username); // output  undefined
 var usename = 'Sam';
 var arr = [1, 2, 3, 4, 5, 6];
 

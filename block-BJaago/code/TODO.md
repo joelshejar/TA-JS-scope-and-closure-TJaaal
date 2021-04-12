@@ -2,9 +2,7 @@ Create a execution context diagram of the following code on your notebook. Take 
 
 - Take in account the different phases of execution, different execution contexts
 
-1.
-
-```js
+1.``js
 var firstName = 'Arya';
 var lastName = 'Stark';
 
@@ -26,7 +24,7 @@ var userMessage = sayHelloToUser('Bran');
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](./img/one.jpg)
 
 2.
 
@@ -43,7 +41,7 @@ sayHi();
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](./img/two.jpg)
 
 3.
 
@@ -65,8 +63,8 @@ sayHi();
 4.
 
 ```js
-console.log(arr); // output
-console.log(username); // output
+console.log(arr); // output [1, 2, 3, 4, 5, 6]
+console.log(username); // output 'Sam'
 var usename = 'Sam';
 var arr = [1, 2, 3, 4, 5, 6];
 

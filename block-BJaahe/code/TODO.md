@@ -48,6 +48,17 @@ lastNameLee('Lynne'); //logs 'Lynne Lee'
 ```js
 function storyWriter() {
   // Your code goes here
+  let story =""
+  return {
+    addWords(word){
+      story += word
+      return story
+    },
+    erase(){
+      story = ""
+      return story
+    }
+  }
 }
 
 // Test
@@ -113,6 +124,17 @@ manager('Head'); // Head Manager
 ```js
 function changeSalary(currentSalary) {
   // Your code goes here
+  return{
+    raise(){
+      return currentSalary += 500
+    },
+    lower(){
+      return currentSalary -= 500
+    },
+    current(){
+      return currentSalary
+    }
+  }
 
 }
 
@@ -146,7 +168,9 @@ The returned function accepts a string (children) and returns the children with 
 function createTag(name) {
   // your code goes here
   return function(string){
-    return 
+    let elm = document.createElement(name)
+    elm.innerText = string
+    return elm
   }
 }
 

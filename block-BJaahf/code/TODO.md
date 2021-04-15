@@ -10,19 +10,10 @@
 **You can use normal for loop for this function**
 
 ```js
-function loop(iv,tf(n),uf(n),bf) {
+function loop(iv,tf,uf,bf) {
   // Your code goes here
-  function tf(n){
-    n>0
-  }
-  function uf(){
-    n-1
-  }
-  function bf(){
-    console.log()
-  }
-  for(iv, tf(n),uf(n)){
-    bf()
+  for(let i=iv; tf(iv); i=uf){
+    bf(i)
   }
 }
 

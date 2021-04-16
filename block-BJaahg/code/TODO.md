@@ -15,7 +15,7 @@ console.log(
   window.knownAs
 );
 ```
-
+undefined, undefined, 'no one'
 2. Guess the output:
 
 ```js
@@ -29,7 +29,7 @@ function fullName(a, b) {
 
 console.log(window.fullName(firstName, lastName));
 ```
-
+Arya Stark            
 3. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
@@ -97,6 +97,7 @@ function isAwesome() {
 }
 isAwesome();
 ```
+undefined
 
 9. What will be the output of the following
 
@@ -110,7 +111,7 @@ function isAwesome() {
 }
 isAwesome();
 ```
-
+true
 10. What will be the output of the following
 
 ```js
@@ -123,7 +124,7 @@ function isAwesome() {
 }
 isAwesome();
 ```
-
+undefined
 11. What will be the output of the following
 
 ```js
@@ -137,7 +138,7 @@ function fullName(a, b) {
 const name = fullName(firstName, lastName);
 console.log(name);
 ```
-
+AryaStark
 12. Guess the output of the code below with a reason.
 
 ```js
@@ -157,7 +158,7 @@ if (true) {
 }
 console.log(name);
 ```
-
+Arya Stark because var keyword is only function scoped.
 14. Guess the output of the code below with a reason.
 
 ```js
@@ -166,7 +167,7 @@ if (true) {
 }
 console.log(name);
 ```
-
+It returns a ReferenceError as the keyword let is both function and block scoped
 15. Guess the output of the code below with a reason.
 
 ```js
@@ -175,7 +176,7 @@ for (var i = 0; i < 20; i++) {
 }
 console.log(i);
 ```
-
+20 as it iterates after reaching 19 and then it checks if i is less than 20 and then it exits the loop
 16. Guess the output of the code below with a reason.
 
 ```js
@@ -184,7 +185,7 @@ for (let i = 0; i < 20; i++) {
 }
 console.log(i);
 ```
-
+ReferenceError as let is block scoped
 17. Guess the output and the reason behind that.
 
 ```js
@@ -196,7 +197,7 @@ function sample() {
 }
 sample();
 ```
-
+John Snow as username is declared using var which is only function scoped but not block scoped
 18. Guess the output and the reason behind that.
 
 ```js
@@ -208,7 +209,7 @@ function sample() {
 }
 sample();
 ```
-
+It returns a ReferenceError as the variable username is declared using let which is both function and block scoped
 19. Guess the output and the reason behind that.
 
 ```js
@@ -222,7 +223,7 @@ function sample() {
 }
 sample();
 ```
-
+It returns John Snow and John Snow, second
 20. Guess the output and the reason behind that.
 
 ```js
@@ -236,7 +237,8 @@ function sample() {
 }
 sample();
 ```
-
+It returns John Snow, first and Arya Stark, second
+as let is block scoped hence the outerscope of usename is not changed to John Snow
 21. Guess the output and the reason behind that.
 
 ```js
@@ -249,7 +251,9 @@ function sample(...args) {
 
 sample('First', 'Second', 'Third');
 ```
-
+Hello I am First
+Hello I am Second
+Hello I am Third
 22. Guess the output and the reason behind that.
 
 ```js
@@ -262,7 +266,9 @@ function sample(...args) {
 
 sample('First', 'Second', 'Third');
 ```
-
+Hello I am First
+Hello I am Second
+Hello I am Third
 23. Guess the output and the reason behind that.
 
 ```js
@@ -275,7 +281,7 @@ if (true) {
   myFunc();
 }
 ```
-
+ReferenceError and Hello World, Second
 24. Guess the output and the reason behind that.
 
 ```js
@@ -291,7 +297,7 @@ function outer() {
 
 outer();
 ```
-
+I love this movie called MAD MAX: FURY ROAD
 25. Guess the output and the reason behind that.
 
 ```js
@@ -308,7 +314,7 @@ function outer() {
 
 outer();
 ```
-
+I love this movie called BEFORE SUNRISE
 26. Guess the output and the reason behind that.
 
 ```js
@@ -328,7 +334,7 @@ function outer() {
 }
 outer();
 ```
-
+I love this movie called GONE GIRL
 30. Using reduce find the final value when the initial value passed is `100`. You have to pass the output of one function into the input of next function in the array `allFunctions` starts with `addOne` ends with `half`.
 
 ```js

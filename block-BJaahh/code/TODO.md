@@ -4,7 +4,11 @@
 
 ```js
 // Your code goes here
-
+function multiplyBy(num1){
+  return function(num2){
+    return num1*num2
+  }
+}
 const double = multiplyBy(2);
 const final = double(15); // final should be 30
 ```
@@ -13,7 +17,12 @@ const final = double(15); // final should be 30
 
 ```js
 // Your code goes here
-
+function fullName(fname){
+  return function whole(lname){
+    return fname+lname  
+  
+  }
+}
 const name = fullName('Will');
 const final = name('Smith'); // final should be "Will Smith"
 ```
@@ -36,6 +45,9 @@ isChild(103); // false
 ```js
 function letsWishThem(greeting) {
   // your code goes here
+  return function random(message){
+    return greeting + message
+  }
 }
 
 const callWithHey = letsWishThem('Hey');
@@ -47,8 +59,12 @@ callWithHello('How Are You?'); // Hello How Are You?
 5. Write a function called `addGame` which takes a string (name of the game) and the current score. It returns a function calling that will increment the score by one and print something like `Score of Basketball is 1`.
 
 ```js
-function addGame(gameName) {
+function addGame(gameName,score) {
   // your code goes here
+  return function calling(){
+    score+=1
+    console.log(`Score of ${gameName} is ${score}`)
+  }
 }
 
 // Output

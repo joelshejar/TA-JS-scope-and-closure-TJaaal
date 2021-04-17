@@ -86,8 +86,18 @@ addCache('foo'); // {12: 22, 100: 110, 1: 11}
 4. Change the above function in such a way that when the returned function is called with any other value than password. It should first check the object where we are storing the argument and return value. If the key is present return the value form the object itself. Otherwise call the callback function with the parameter.
 
 ```js
-function createCache() {
+function createCache(cb,pwd) {
   // Your code goes here
+  let obj = {}
+  return function(param) {
+    if(param !== pwd){
+      if(obj[param]){
+        return obj[param]
+      } else{
+        return obj
+      }
+    }
+  }
 }
 
 function add10(num) {

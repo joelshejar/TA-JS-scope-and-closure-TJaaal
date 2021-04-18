@@ -6,6 +6,7 @@ function once(cb) {
   var executed = false
   return function(){
     if(!executed){
+      cb()
       executed = true
     }
   }
@@ -25,8 +26,12 @@ log(); // return undefinde (can't be called twice)
 ```js
 function once(cb,param1) {
   // your code goes here
+  var executed = false
   function cb(param1){
-
+    if(!executed){
+      cb(param1)
+      executed = true
+    }
   }
 }
 
@@ -48,7 +53,7 @@ function once(cb) {
   var executed = false
   function(...arg){
     if(!executed){
-      console.log(arg)
+      console.log(...arg)
     }
   }
 }
